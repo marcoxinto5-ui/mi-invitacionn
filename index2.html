@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mi Invitación - Cumpleaños 24</title>
+    <link href="https://fonts.googleapis.com/css2?family=Anton&family=Roboto+Condensed:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Roboto Condensed', sans-serif;
+            background-color: #0b0c10;
+            background-image: 
+                radial-gradient(circle at 50% 20%, rgba(197, 24, 30, 0.2) 0%, transparent 60%),
+                linear-gradient(rgba(11, 12, 16, 0.85), rgba(11, 12, 16, 0.95));
+            color: #ffffff;
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 20px;
+        }
+
+        .invitation-card {
+            background: rgba(18, 20, 28, 0.95);
+            border: 2px solid #c5181e;
+            border-radius: 8px;
+            width: 100%;
+            max-width: 450px;
+            box-shadow: 0 0 35px rgba(197, 24, 30, 0.4), inset 0 0 15px rgba(0, 0, 0, 0.8);
+            overflow: hidden;
+            animation: fadeIn 1s ease-out forwards;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; transform: scale(0.95); }
+            to { opacity: 1; transform: scale(1); }
+        }
+
+        .vought-header {
+            background: #111;
+            padding: 12px;
+            text-align: center;
+            border-bottom: 2px solid #c5181e;
+            font-size: 0.85rem;
+            letter-spacing: 3px;
+            text-transform: uppercase;
+            color: #a0a0a0;
+            font-weight: 700;
+        }
+
+        .hero-image-container {
+            width: 100%;
+            height: 250px;
+            overflow: hidden;
+            border-bottom: 2px solid #c5181e;
+            position: relative;
+        }
+
+        .hero-image-container img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            object-position: center;
+        }
+
+        .hero-banner {
+            background: linear-gradient(to bottom, #1f2233, #0b0c10);
+            padding: 20px;
+            text-align: center;
+            border-bottom: 1px dashed rgba(197, 24, 30, 0.4);
+        }
+
+        .tagline {
+            font-family: 'Anton', sans-serif;
+            font-size: 1.8rem;
+            color: #ffffff;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.8);
+            margin-bottom: 2px;
+        }
+
+        .age-display {
+            font-family: 'Anton', sans-serif;
+            font-size: 4rem;
+            color: #c5181e;
+            line-height: 1;
+            text-shadow: 0 0 20px rgba(197, 24, 30, 0.6);
+            margin-bottom: 5px;
+        }
+
+        .mission-title {
+            font-size: 0.95rem;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            color: #4da6ff;
+            font-weight: 700;
+        }
+
+        .body-content {
+            padding: 20px;
+        }
+
+        .detail-row {
+            display: flex;
+            align-items: center;
+            background: rgba(255, 255, 255, 0.03);
+            border: 1px solid rgba(255, 255, 255, 0.08);
+            margin-bottom: 12px;
+            padding: 10px 15px;
+            border-radius: 4px;
+        }
+
+        .detail-icon {
+            font-size: 1.4rem;
+            margin-right: 15px;
+            min-width: 30px;
+            text-align: center;
+        }
+
+        .detail-info h4 {
+            font-size: 0.7rem;
+            color: #888888;
+            text-transform: uppercase;
+            letter-spacing: 1.5px;
+        }
+
+        .detail-info p {
+            font-size: 1.05rem;
+            font-weight: 700;
+            color: #f1f1f1;
+        }
+
+        .action-container {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+            margin-top: 15px;
+        }
+
+        .btn {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 10px;
+            width: 100%;
+            padding: 12px;
+            text-decoration: none;
+            font-family: 'Anton', sans-serif;
+            font-size: 1.1rem;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+            border-radius: 4px;
+            transition: all 0.2s ease;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.5);
+        }
+
+        .btn-maps {
+            background-color: #1f3b73;
+            color: white;
+            border: 1px solid #4da6ff;
+        }
+
+        .btn-maps:hover {
+            background-color: #2a4f9e;
+            box-shadow: 0 0 15px rgba(77, 166, 255, 0.5);
+        }
+
+        .btn-whatsapp {
+            background-color: #20b038;
+            color: white;
+            border: 1px solid #2ecc71;
+        }
+
+        .btn-whatsapp:hover {
+            background-color: #23c43e;
+            box-shadow: 0 0 15px rgba(46, 204, 113, 0.6);
+        }
+
+        .footer-warning {
+            text-align: center;
+            margin-top: 15px;
+            font-size: 0.65rem;
+            color: #666;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="invitation-card">
+        <div class="vought-header">
+            ★ Special Briefing • By Order of the Syndicate ★
+        </div>
+
+        <div class="hero-image-container">
+            <img src="https://es.web.img3.acsta.net/pictures/19/07/09/14/34/1532536.jpg?coixp=57&coiyp=52" alt="The Boys Banner">
+        </div>
+
+        <div class="hero-banner">
+            <div class="tagline">¡Estás Seleccionado!</div>
+            <div class="age-display">24</div>
+            <div class="mission-title">Misión: Celebrar Cumpleaños</div>
+        </div>
+
+        <div class="body-content">
+            <div class="detail-row">
+                <div class="detail-icon">📅</div>
+                <div class="detail-info">
+                    <h4>Fecha</h4>
+                    <p>Sábado 28 de Noviembre</p>
+                </div>
+            </div>
+
+            <div class="detail-row">
+                <div class="detail-icon">⏰</div>
+                <div class="detail-info">
+                    <h4>Hora</h4>
+                    <p>3:00 PM</p>
+                </div>
+            </div>
+
+            <div class="detail-row">
+                <div class="detail-icon">📍</div>
+                <div class="detail-info">
+                    <h4>Ubicación</h4>
+                    <p>Calle Tlaxcalanzi #426</p>
+                </div>
+            </div>
+
+            <div class="action-container">
+                <a href="https://maps.app.goo.gl/GY2S75JKtcDFsRep6" target="_blank" class="btn btn-maps">
+                    🗺️ Ver Ubicación Exacta
+                </a>
+                <a href="https://wa.me/522212741219?text=¡Hola!%20Confirmo%20mi%20asistencia%20a%20tu%20cumpleaños. 🎉" target="_blank" class="btn btn-whatsapp">
+                    💬 Confirmar por WhatsApp
+                </a>
+            </div>
+
+            <div class="footer-warning">
+                Confidencial • Solo para Invitados
+            </div>
+        </div>
+    </div>
+
+</body>
+</html>
